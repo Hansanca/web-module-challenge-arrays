@@ -127,9 +127,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(array,){
-  const number = 2
-  return (array.indexof(2));
+function getFlavorByIndex(array, index){
+  return array[index]
 }
 
 
@@ -148,8 +147,9 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(array, newFlavor){
-  array.pop();
+function removeFlavorByName(array, flavor){
+array.splice(array.indexOf(flavor), 1);
+return array;
   
 }
 
@@ -174,8 +174,13 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, Chocolate){
+  const filteredArray =[];
+  for (let i = 0; i < array.length; i++)
+  if (array[i].includes(Chocolate)){
+    filteredArray.push(array[i])
+  }
+  return filteredArray
 }
 
 
